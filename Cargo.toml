@@ -1,0 +1,11 @@
+[package]
+name = "rust_orbtk_app"
+version = "0.1.0"
+authors = ["mk10969 <mk10969@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+orbtk = "0.3.1-alpha3"
+

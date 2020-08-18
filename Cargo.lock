@@ -290,6 +290,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "diesel_example"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "diesel",
+ "dotenv",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "dirs"
 version = "3.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -598,9 +609,9 @@ dependencies = [
 
 [[package]]
 name = "once_cell"
-version = "1.4.0"
+version = "1.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0b631f7e854af39a1739f401cf34a8a013dfe09eac4fa4dba91e9768bd28168d"
+checksum = "260e51e7efe62b592207e9e13a68e43692a7a279171d6ba57abd208bf23645ad"
 
 [[package]]
 name = "orbclient"
@@ -752,6 +763,13 @@ dependencies = [
  "orbtk-theme",
  "orbtk-utils",
  "rust_decimal",
+]
+
+[[package]]
+name = "orbtk_example"
+version = "0.1.0"
+dependencies = [
+ "orbtk",
 ]
 
 [[package]]
@@ -1104,18 +1122,6 @@ checksum = "95ba36e8c41bf675947e200af432325f332f60a0aea0ef2dc456636c2f6037d7"
 dependencies = [
  "num-traits",
  "serde",
-]
-
-[[package]]
-name = "rust_orbtk_app"
-version = "0.1.0"
-dependencies = [
- "chrono",
- "diesel",
- "dotenv",
- "orbtk",
- "serde",
- "serde_json",
 ]
 
 [[package]]

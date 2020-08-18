@@ -3,11 +3,13 @@ extern crate chrono;
 extern crate diesel;
 extern crate dotenv;
 
+use std::env;
+
 use diesel::pg::PgConnection;
 use diesel::prelude::*;
-
 use dotenv::dotenv;
-use std::env;
+
+use crate::model::Photo;
 
 mod model;
 mod schema;
@@ -15,6 +17,18 @@ mod schema;
 fn main() {
     use self::schema::photos::dsl::*;
     let connection = establish_connection();
+    let results = photos
+        .filter(description.eq("AAA"))
+        .limit(5)
+        .load::<Photo>(&connection)
+        .expect("Error loading posts");
+
+    println!("Displaying {} posts", results.len());
+    for photo in results {
+        println!("{}", photo.name);
+        println!("----------\n");
+        println!("{}", photo.description.unwrap());
+    }
 }
 
 fn establish_connection() -> PgConnection {

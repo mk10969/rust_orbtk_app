@@ -2,5 +2,6 @@
 
 members = [
     "orbtk_example",
-    "diesel_example" 
+    "diesel_example",
+    "csv_example"
 ]

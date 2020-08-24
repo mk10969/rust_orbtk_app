@@ -417,7 +417,7 @@ fn performance_up_read_csv_to_model() -> Result<u64, Box<dyn Error>> {
 
     for result in reader.deserialize() {
         let record: RecordPerformance = result?;
-        if &record.country == "us" && &record.region == "MA" {
+        if record.country == "us" && record.region == "MA" {
             count += 1;
         }
     }

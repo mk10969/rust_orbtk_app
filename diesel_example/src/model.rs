@@ -1,4 +1,5 @@
 use chrono::NaiveDateTime;
+
 // DBからのデータ取得用構造体
 #[derive(Eq, PartialEq, Debug, Queryable)]
 pub struct Photo {

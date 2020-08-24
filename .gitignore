@@ -5,3 +5,5 @@ rustfmt.toml
 
 .env
 .envrc
+
+/data

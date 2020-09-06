@@ -22,10 +22,22 @@ diesel migration generate create_photos
 
 create table では、必ず PK の制約を入れた table にすること！
 
-### tapply migration table
+### apply migration table
 
 diesel migration run
 
 ### rollback (=redoing) migration table
 
 diesel migration redo
+
+
+## 存在するtablekからtable!マクロとモデルを自動生成する方法
+
+### if exist table (reverse engineering)
+
+diesel print-schema　 > src/schema.rs
+
+### reverse create model struct (before: cargo install cargo install diesel_cli_ext)
+
+deisel_ext --model
+
